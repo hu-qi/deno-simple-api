@@ -1,0 +1,33 @@
+@baseUrl = http://localhost:8080
+
+### 问候
+GET {{baseUrl}}
+
+### 获取所有
+GET {{baseUrl}}/users
+
+### 新增用户
+POST {{baseUrl}}/users
+content-type: application/json
+
+{
+    "id": "1028798612771239",
+    "user_name": "胡琦",
+    "company": "公众号： 胡琦",
+    "description": "前端打杂"
+}
+
+### 指定 id 获取
+GET {{baseUrl}}/users/1028798612771239
+
+
+### 更新用户
+PUT {{baseUrl}}/users/1028798612771239
+content-type: application/json
+
+{
+    "description": "Copy Code, Copy World!"
+}
+
+### 删除用户
+DELETE  {{baseUrl}}/users/1028798612771239
